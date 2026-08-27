@@ -1,0 +1,28 @@
+{
+  "schema": "adapta-client-handoff/v1",
+  "project": "Digitoel Serviços Contábeis",
+  "createdAt": "2026-08-27",
+  "phase": 1,
+  "scopeBoundary": "Aquisição própria da Digitoel; não inclui operação de campanhas para clientes, tenancy/multiempresa, CRM, WhatsApp ou integrações produtivas.",
+  "destination": "adapta-cliente",
+  "environment": {
+    "builder": "GoSkip",
+    "backend": "SkipCloud",
+    "repository": "not-created",
+    "automatedValidationCommands": "not-defined"
+  },
+  "allowedContents": [
+    "README.md",
+    "01-configuracoes/ambiente-fase-1.md",
+    "02-fase-atual/fase.md",
+    "02-fase-atual/SPEC-1-001 — Núcleo de campanhas e permissões internas.md",
+    "02-fase-atual/SPEC-1-002 — Ativos, modelos e planejamento.md",
+    "02-fase-atual/SPEC-1-003 — Checklist, aprovação e prévia.md",
+    "03-documentos/STATUS.md",
+    "03-documentos/changelog.md"
+  ],
+  "excludedContents": [
+    "Escopo base", "análise crítica", "análise do consultor", "direções", "requisitos", "revisões", "decisões internas", ".adapta", "fases futuras", "reuniões brutas", "metodologia", "segredos e credenciais"
+  ],
+  "repositoryOrPublication": "not-authorized"
+}
