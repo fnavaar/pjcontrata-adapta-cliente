@@ -1,8 +1,8 @@
-# Digitoel — contexto de construção
+# IA Ferramenta — contexto de construção
 
 ## Produto
 
-Plataforma interna de operação e otimização de campanhas de aquisição da própria Digitoel. Organiza campanhas por canal, segmento/ICP, oferta, funil, conta, período e estado.
+Plataforma interna de operação e otimização de campanhas de aquisição da própria IA Ferramenta. Organiza campanhas por canal, segmento/ICP, oferta, funil, conta, período e estado.
 
 ## Ambiente
 
@@ -17,4 +17,4 @@ Fase 1 planejada; F1-T01 é a única task elegível. Consulte `04_fase-atual/fas
 
 ## Proibições da Fase 1
 
-Não integrar plataformas externas, não usar credenciais, não publicar anúncios, não produzir conteúdo/estratégia por IA e não criar operação de mídia para clientes da Digitoel.
+Não integrar plataformas externas, não usar credenciais, não publicar anúncios, não produzir conteúdo/estratégia por IA e não criar operação de mídia para clientes da IA Ferramenta.

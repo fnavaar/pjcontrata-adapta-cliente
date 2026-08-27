@@ -2,15 +2,15 @@
 
 **Fase:** 1 — Núcleo de operação e prontidão de campanhas  
 **Estado:** decomposta em tasks; nenhuma task foi iniciada  
-**Degrau da solução:** Sistema operacional interno. A entrega palpável é o registro e a consulta controlada de campanhas de aquisição da própria Digitoel, sem publicação externa.
+**Degrau da solução:** Sistema operacional interno. A entrega palpável é o registro e a consulta controlada de campanhas de aquisição da própria IA Ferramenta, sem publicação externa.
 
 ## Resultado
 
-Um usuário interno autorizado cria, consulta e edita uma campanha de aquisição da Digitoel, identificada por canal, segmento/ICP, oferta, funil, conta de referência e período. O sistema impede que um usuário sem a alçada necessária altere, aprove ou publique a campanha.
+Um usuário interno autorizado cria, consulta e edita uma campanha de aquisição da IA Ferramenta, identificada por canal, segmento/ICP, oferta, funil, conta de referência e período. O sistema impede que um usuário sem a alçada necessária altere, aprove ou publique a campanha.
 
 ## Limites
 
-- O produto atende somente a aquisição da própria Digitoel; não há cliente externo, tenancy, espaço de cliente ou operação de mídia como serviço.
+- O produto atende somente a aquisição da própria IA Ferramenta; não há cliente externo, tenancy, espaço de cliente ou operação de mídia como serviço.
 - Não conectar Google Ads, Meta Ads, Drive, CRM, WhatsApp ou secret manager nesta SPEC.
 - Não publicar, pausar, alterar orçamento em plataforma externa ou afirmar estado externo.
 - Não inferir orçamento, público, copy, pixel, URL, oferta ou dados de mensuração.
@@ -38,7 +38,7 @@ Estados permitidos: `DRAFT`, `IN_REVIEW`, `CHANGES_REQUESTED`, `APPROVED`, `READ
 
 ## Regras
 
-1. Cada campanha é aquisição da Digitoel e não possui `client_id`, espaço de cliente ou compartilhamento externo.
+1. Cada campanha é aquisição da IA Ferramenta e não possui `client_id`, espaço de cliente ou compartilhamento externo.
 2. `platform`, canal, segmento/ICP, oferta, funil, conta de referência e período devem permanecer distinguíveis em lista, detalhe e auditoria.
 3. Datas exigem início igual ou anterior ao fim; datas passadas não são bloqueadas em rascunho, pois podem representar planejamento/histórico, mas não tornam campanha pronta para publicação.
 4. Toda criação, edição, transição e arquivamento registra autor, horário, antes/depois e motivo quando houver devolução/arquivamento.

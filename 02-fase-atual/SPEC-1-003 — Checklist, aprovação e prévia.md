@@ -7,7 +7,7 @@
 
 ## Resultado
 
-Para cada campanha interna da Digitoel, o sistema calcula um checklist explícito de prontidão, registra aprovação/reprovação quando aplicável e mostra uma prévia determinística da configuração que seria enviada ao conector futuro. Nenhum comando externo é exibido como publicação nesta fase.
+Para cada campanha interna da IA Ferramenta, o sistema calcula um checklist explícito de prontidão, registra aprovação/reprovação quando aplicável e mostra uma prévia determinística da configuração que seria enviada ao conector futuro. Nenhum comando externo é exibido como publicação nesta fase.
 
 ## Limites
 

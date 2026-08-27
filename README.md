@@ -1,10 +1,10 @@
-# Digitoel — Espaço operacional do cliente
+# IA Ferramenta — Espaço operacional do cliente
 
 Este espaço contém o material liberado da **Fase 1 — Núcleo de operação e prontidão de campanhas**.
 
 ## Objetivo da fase
 
-Organizar a aquisição de clientes da própria Digitoel: campanhas, ativos, modelos, permissões, checklist, aprovação e prévia. A Fase 1 não publica campanhas e não integra Meta Ads, Google Ads, Google Drive, CRM ou WhatsApp.
+Organizar a aquisição de clientes da própria IA Ferramenta: campanhas, ativos, modelos, permissões, checklist, aprovação e prévia. A Fase 1 não publica campanhas e não integra Meta Ads, Google Ads, Google Drive, CRM ou WhatsApp.
 
 ## Ambiente definido
 

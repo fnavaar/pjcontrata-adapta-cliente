@@ -1,12 +1,12 @@
-# Instruções operacionais — Digitoel
+# Instruções operacionais — IA Ferramenta
 
 ## Missão da Fase 1
 
-Construir no GoSkip a base interna para organizar campanhas de aquisição da própria Digitoel: autenticação/RBAC, campanhas, ativos, modelos, checklist, aprovação e prévia. Persistência, autenticação e RBAC usam SkipCloud.
+Construir no GoSkip a base interna para organizar campanhas de aquisição da própria IA Ferramenta: autenticação/RBAC, campanhas, ativos, modelos, checklist, aprovação e prévia. Persistência, autenticação e RBAC usam SkipCloud.
 
 ## Fronteira obrigatória
 
-- A Digitoel é uma prestadora de serviços contábeis/BPO; o sistema estrutura a aquisição de clientes da própria empresa.
+- A IA Ferramenta é uma prestadora de serviços contábeis/BPO; o sistema estrutura a aquisição de clientes da própria empresa.
 - Não criar operação de campanhas para clientes, tenancy/multiempresa ou `client_id`.
 - Não conectar Meta Ads, Google Ads, Google Drive, CRM ou WhatsApp nesta Fase 1.
 - Não criar segredos, publicar campanha, iniciar gasto de mídia, criar repositório, fazer commit ou push sem autorização explícita.

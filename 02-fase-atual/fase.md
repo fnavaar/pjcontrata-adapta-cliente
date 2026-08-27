@@ -1,4 +1,4 @@
-# Tasks Gerais — Fase 1 | Digitoel
+# Tasks Gerais — Fase 1 | IA Ferramenta
 
 **Ambiente confirmado:** GoSkip como base de construção; SkipCloud para persistência, autenticação e RBAC. Repositório será criado posteriormente a partir da pasta do cliente. Comandos automatizados ainda não definidos: cada task exige evidência verificável no preview/SkipCloud e teste humano ao fim.
 

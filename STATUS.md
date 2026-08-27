@@ -1,4 +1,4 @@
-# STATUS — Digitoel
+# STATUS — IA Ferramenta
 
 **Atualizado em:** 2026-08-27  
 **Fase atual:** Fase 1 — Núcleo de operação e prontidão de campanhas  
@@ -13,7 +13,7 @@
 
 ## Escopo e SPECs
 
-- `02-Escopo-Definitivo.md` v1.1: aquisição própria da Digitoel.
+- `02-Escopo-Definitivo.md` v1.1: aquisição própria da IA Ferramenta.
 - SPEC-1-001, SPEC-1-002 e SPEC-1-003 aprovadas pelo consultor.
 
 ## Tasks

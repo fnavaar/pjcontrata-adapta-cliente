@@ -3,7 +3,7 @@
     "adapta-cliente@adapta-native": true
   },
   "project": {
-    "name": "Digitoel",
+    "name": "IA Ferramenta",
     "phase": 1,
     "environment": "GoSkip + SkipCloud"
   }
