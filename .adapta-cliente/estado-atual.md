@@ -3,11 +3,11 @@
 - task_id: F1-T01
 - champion: Gustavo - Gerente de Marketing
 - spec: 04_fase-atual/specs/spec-1-001-nucleo-campanhas-e-permissoes.md
-- etapa: bloqueada
-- autorizacao_implementacao: confirmada — "Verifique se o nome do projeto foi alterado e executa a task que te pedi"
-- teste_humano: nao_aplicavel
-- verificacao_automatica: falhou — projeto Skip 53880 existe, mas não está integrado ao Skip Cloud; Auth/RBAC não pode ser configurado
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente — análise/decomposição entregue; autorização anterior foi consumida pela execução bloqueada da tentativa no projeto 53880
+- teste_humano: pendente
+- verificacao_automatica: pendente — baseline do novo projeto 53888 confirmado; implementação de Auth/RBAC ainda não executada
 - aprendizado: pendente
-- ultima_acao: projeto Skip IA Ferramenta verificado; integração Skip Cloud consultada e bloqueio confirmado
-- proxima_acao: integrar o projeto IA Ferramenta ao Skip Cloud
-- atualizado_em: 2026-08-27T11:54:00-03:00
+- ultima_acao: F1-T01 decomposta; projeto IA Ferramenta 53888 confirmado com Skip Cloud integrado, coleção users e zero migrações
+- proxima_acao: aguardar autorização para implementar F1-T01 no projeto 53888
+- atualizado_em: 2026-08-27T12:03:00-03:00
