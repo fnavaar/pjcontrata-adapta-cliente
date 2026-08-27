@@ -8,7 +8,8 @@
 - Ambiente de construção definido: GoSkip com SkipCloud para persistência, autenticação e RBAC; repositório será criado após a pasta do cliente e comandos automatizados ainda não foram definidos.
 - Geradas F1-T01 a F1-T09 e sincronizadas em `00-Tasks_Gerais.md`, Jornada, SPECs e matriz de rastreabilidade.
 - F1-T01 é a única task elegível; nenhuma task, integração produtiva, credencial, publicação ou gasto de mídia foi iniciado.
+- Verificada a execução autorizada da F1-T01: o projeto Skip IA Ferramenta (`projectId 53880`) existe, mas não está integrado ao Skip Cloud; Auth/RBAC não pôde ser configurado. Estado persistente registrado em `.adapta-cliente/estado-atual.md`.
 
 ## Próximo passo
 
-Autorizar explicitamente a execução de F1-T01. Após a prova no GoSkip/SkipCloud e o teste humano, a próxima task permanece bloqueada até nova autorização.
+Integrar o projeto IA Ferramenta ao Skip Cloud. Depois, retomar exclusivamente a F1-T01, configurar Auth/RBAC e solicitar teste humano antes de qualquer avanço.
