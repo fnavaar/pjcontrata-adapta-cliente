@@ -1,0 +1,28 @@
+{
+  "schema": "adapta-client-handoff/v1",
+  "project": "Digitoel Serviços Contábeis",
+  "createdAt": "2026-08-27",
+  "phase": 1,
+  "destination": "adapta-cliente",
+  "structure": [
+    "AGENTS.md", "CLAUDE.md", "README.md", "STATUS.md", "changelog.md", "handoff-manifest-v2.json",
+    ".claude/settings.json", ".git/",
+    "01_projeto/", "02_reunioes/", "03_documentos/",
+    "04_fase-atual/fase.md", "04_fase-atual/specs/",
+    "05_entregas/", "06_notas/"
+  ],
+  "phaseFiles": [
+    "04_fase-atual/fase.md",
+    "04_fase-atual/specs/spec-1-001-nucleo-campanhas-e-permissoes.md",
+    "04_fase-atual/specs/spec-1-002-ativos-modelos-e-planejamento.md",
+    "04_fase-atual/specs/spec-1-003-checklist-aprovacao-e-previa.md"
+  ],
+  "environment": {
+    "builder": "GoSkip",
+    "backend": "SkipCloud",
+    "repository": "not-created",
+    "automatedValidationCommands": "not-defined"
+  },
+  "excluded": ["escopo base", "analise critica", "analise do consultor", "direcoes", "requisitos", "revisoes", "metodologia", "fases futuras", "reunioes brutas", "segredos", "credenciais"],
+  "externalActions": {"repository": "not-authorized", "commit": "not-authorized", "push": "not-authorized", "sharing": "not-authorized"}
+}
