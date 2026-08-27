@@ -2,13 +2,14 @@
 
 **Atualizado em:** 2026-08-27  
 **Fase atual:** Fase 1 — Núcleo de operação e prontidão de campanhas  
-**Estado:** tasks geradas; F1-T01 é a única task elegível.
+**Estado:** F1-T01 bloqueada por falta de integração com Skip Cloud.
 
 ## Ambiente
 
 - Construção: GoSkip.
 - Persistência, autenticação e RBAC: SkipCloud.
-- Repositório: será criado somente após a geração da pasta do cliente; não bloqueia F1-T01.
+- Projeto Skip criado: IA Ferramenta, `projectId 53880`, preview v0.0.2.
+- Integração Skip Cloud: não configurada; coleções e migrações não estão disponíveis.
 - Comandos automatizados: ainda não definidos; cada task exige evidência verificável no preview/SkipCloud e teste humano.
 
 ## Escopo e SPECs
@@ -18,9 +19,9 @@
 
 ## Tasks
 
-- F1-T01: criar projeto GoSkip e configurar SkipCloud Auth/RBAC interno — **ELEGÍVEL**.
+- F1-T01: criar projeto GoSkip e configurar SkipCloud Auth/RBAC interno — **BLOQUEADA** por integração Skip Cloud ausente.
 - F1-T02 a F1-T09: bloqueadas pelas dependências indicadas em `00-Tasks_Gerais.md`.
 
 ## Gate
 
-Nenhuma task foi iniciada. A próxima ação segura é autorização explícita para executar somente F1-T01. Após prova e teste humano, aguardar nova autorização antes de F1-T02.
+A execução da F1-T01 foi autorizada, mas não pode prosseguir até integrar o projeto IA Ferramenta ao Skip Cloud. Após a integração, retomar a configuração de Auth/RBAC e então solicitar teste humano.
