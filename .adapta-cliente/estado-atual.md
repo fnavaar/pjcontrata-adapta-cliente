@@ -5,9 +5,9 @@
 - spec: 04_fase-atual/specs/spec-1-001-nucleo-campanhas-e-permissoes.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — "Pode executar" / "Pode fazer" (2026-08-27)
-- teste_humano: pendente
-- verificacao_automatica: passou — migrations 0001_setup_rbac e 0002_seed_admin aplicadas (31/ago); 401 sem token em /backend/v1/rbac-test; 403 ao criar usuário com role=administrador; roles seeded (4); login admin e usuária comercial validados no preview; build v0.0.3 QA ok
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-08-31-1000-rbac-server-side-skipcloud.md
-- ultima_acao: retomada da F1-T01 com MCP do Skip disponível; RBAC server-side implementado e verificado automaticamente
-- proxima_acao: teste humano no preview (login admin + papel comercial); se aprovado, concluir F1-T01
-- atualizado_em: 2026-08-31T10:05:00-03:00
+- teste_humano: pendente — aguardando novo teste após correção de segurança (autopromoção bloqueada)
+- verificacao_automatica: passou — verificação independente completa: autopromoção 403 e banco inalterado; signup elevado 403; rbac-test 401 sem token; RLS lista apenas o próprio; catálogo 4 papéis; mutação de roles por usuário comum negada; build v0.0.4 QA ok
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-08-31-1430-hook-request-e-record-body-merge.md
+- ultima_acao: corrigida falha de autopromoção de papel encontrada na verificação independente (hooks + migration 0003); v0.0.4 aplicado
+- proxima_acao: novo teste humano no preview (login admin continua igual); se aprovado, concluir F1-T01
+- atualizado_em: 2026-08-31T14:35:00-03:00

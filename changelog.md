@@ -2,11 +2,9 @@
 
 ## 2026-08-31
 
-- DEBUG F1-T01: causa raiz do bloqueio confirmada (MCP do Skip sem conexão em 27/ago; nenhuma alteração havia sido aplicada na época). MCP restabelecido e construção retomada.
-- Implementado Auth/RBAC server-side no projeto Skip IA Ferramenta (projectId 53888): campo `role` na coleção users (administrador, marketing, aprovador, comercial), coleção `roles` com catálogo e seed dos 4 papéis, hooks de guarda enforce_role.js / enforce_role_update.js (bloqueio de escalada e autopromoção), rota GET /backend/v1/rbac-test e frontend com login + dashboard por papel (superfícies permitidas).
-- Seed de usuário administrador inicial (credencial provisória para teste humano, a ser trocada após aceite).
-- Versão preview v0.0.3 (build e QA ok). Verificações automáticas passaram: 401 sem token, 403 em escalada de papel, 200 em signup sem papel, listagem de 4 papéis, login admin e papel comercial validados no preview.
-- F1-T01 **aguardando teste humano** explícito antes de concluir ou avançar.
+- Verificação independente da F1-T01 encontrou e corrigiu falha de segurança: usuária comum conseguia se autopromover a administrador pela API (e.record em hook de request já refletia o body proposto; comparação atual/novo nunca disparava). Reescritos enforce_role.js e enforce_role_update.js (leitura do papel persistido via $app.findRecordById), migration 0003 com re-seed dos 4 papéis e endurecimento das regras da coleção roles (create/update/delete só administrador). Build v0.0.4 QA ok.
+- Reverificação completa do zero: autopromoção 403 e banco inalterado; signup com papel elevado 403; rbac-test 401 sem token; RLS lista apenas o próprio; catálogo com 4 papéis; mutação de roles por usuário comum negada no servidor.
+- F1-T01 aguardando NOVO teste humano após a correção (login admin no preview deve continuar funcionando).
 
 ## 2026-08-27
 
@@ -20,4 +18,4 @@
 
 ## Próximo passo
 
-Teste humano da F1-T01 no preview. Se aprovado, concluir a task e liberar F1-T02.
+Novo teste humano da F1-T01 no preview. Se aprovado, concluir a task e liberar F1-T02.
