@@ -2,14 +2,14 @@
 
 **Atualizado em:** 2026-08-31  
 **Fase atual:** Fase 1 — Núcleo de operação e prontidão de campanhas  
-**Estado:** F1-T01 implementada — aguardando teste humano.
+**Estado:** F1-T01 CONCLUÍDA (1/9 tasks — 11%).
 
 ## Ambiente
 
 - Construção: GoSkip.
 - Persistência, autenticação e RBAC: SkipCloud (integrados).
-- Projeto Skip: IA Ferramenta, `projectId 53888`, preview https://ia-ferramenta-562d3--preview.goskip.app (v0.0.3).
-- Migrations aplicadas: `0001_setup_rbac`, `0002_seed_admin`.
+- Projeto Skip: IA Ferramenta, `projectId 53888`, preview https://ia-ferramenta-562d3--preview.goskip.app (v0.0.4).
+- Migrations aplicadas: `0001_setup_rbac`, `0002_seed_admin`, `0003_reseed_roles_harden_rules`.
 - Hooks de servidor: `enforce_role.js`, `enforce_role_update.js`, `http_permission_test.js`.
 - Frontend: login + dashboard por papel (superfícies permitidas).
 
@@ -20,9 +20,9 @@
 
 ## Tasks
 
-- F1-T01: criar projeto GoSkip e configurar SkipCloud Auth/RBAC interno — **IMPLEMENTADA (aguardando teste humano)**.
-- F1-T02 a F1-T09: bloqueadas pelas dependências indicadas em `00-Tasks_Gerais.md`.
+- F1-T01: criar projeto GoSkip e configurar SkipCloud Auth/RBAC interno — **CONCLUÍDA (31/08/2026)**.
+- F1-T02 a F1-T09: bloqueadas por dependência; aguardam seleção e autorização.
 
 ## Gate
 
-A execução da F1-T01 foi autorizada e implementada; as verificações automáticas passaram (login por papel, negação server-side, 401 sem token, 403 em escalada). **Aguardando teste humano explícito** antes de concluir ou avançar.
+F1-T01 concluída com teste humano aprovado (screenshot admin). Próximas tasks somente mediante novo pedido, com relatório de análise antes de qualquer implementação.

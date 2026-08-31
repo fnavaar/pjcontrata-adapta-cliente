@@ -5,6 +5,8 @@
 - Verificação independente da F1-T01 encontrou e corrigiu falha de segurança: usuária comum conseguia se autopromover a administrador pela API (e.record em hook de request já refletia o body proposto; comparação atual/novo nunca disparava). Reescritos enforce_role.js e enforce_role_update.js (leitura do papel persistido via $app.findRecordById), migration 0003 com re-seed dos 4 papéis e endurecimento das regras da coleção roles (create/update/delete só administrador). Build v0.0.4 QA ok.
 - Reverificação completa do zero: autopromoção 403 e banco inalterado; signup com papel elevado 403; rbac-test 401 sem token; RLS lista apenas o próprio; catálogo com 4 papéis; mutação de roles por usuário comum negada no servidor.
 - F1-T01 aguardando NOVO teste humano após a correção (login admin no preview deve continuar funcionando).
+- `[champion: Gustavo]` · Task F1-T01 concluída: projeto GoSkip criado e SkipCloud Auth/RBAC interno configurado (campo role + catálogo roles + hooks server-side + rota /backend/v1/rbac-test + frontend login/dashboard). Evidência: preview v0.0.4, migrations 0001-0003 aplicadas, autopromoção 403, signup elevado 403, RLS self-only, screenshot de aprovação do admin.
+- Próxima task elegível após novo pedido: F1-T02 (modelar campanhas internas).
 
 ## 2026-08-27
 
@@ -18,4 +20,4 @@
 
 ## Próximo passo
 
-Novo teste humano da F1-T01 no preview. Se aprovado, concluir a task e liberar F1-T02.
+F1-T01 concluída. Nova seleção de task (F1-T02) somente mediante novo pedido explícito.
