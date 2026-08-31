@@ -1,5 +1,13 @@
 # Changelog — IA Ferramenta
 
+## 2026-08-31
+
+- DEBUG F1-T01: causa raiz do bloqueio confirmada (MCP do Skip sem conexão em 27/ago; nenhuma alteração havia sido aplicada na época). MCP restabelecido e construção retomada.
+- Implementado Auth/RBAC server-side no projeto Skip IA Ferramenta (projectId 53888): campo `role` na coleção users (administrador, marketing, aprovador, comercial), coleção `roles` com catálogo e seed dos 4 papéis, hooks de guarda enforce_role.js / enforce_role_update.js (bloqueio de escalada e autopromoção), rota GET /backend/v1/rbac-test e frontend com login + dashboard por papel (superfícies permitidas).
+- Seed de usuário administrador inicial (credencial provisória para teste humano, a ser trocada após aceite).
+- Versão preview v0.0.3 (build e QA ok). Verificações automáticas passaram: 401 sem token, 403 em escalada de papel, 200 em signup sem papel, listagem de 4 papéis, login admin e papel comercial validados no preview.
+- F1-T01 **aguardando teste humano** explícito antes de concluir ou avançar.
+
 ## 2026-08-27
 
 - Corrigido `02-Escopo-Definitivo.md` para delimitar o produto à aquisição própria da IA Ferramenta; removida a interpretação de operação de mídia para clientes.
@@ -12,4 +20,4 @@
 
 ## Próximo passo
 
-Integrar o projeto IA Ferramenta ao Skip Cloud. Depois, retomar exclusivamente a F1-T01, configurar Auth/RBAC e solicitar teste humano antes de qualquer avanço.
+Teste humano da F1-T01 no preview. Se aprovado, concluir a task e liberar F1-T02.

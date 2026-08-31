@@ -3,11 +3,11 @@
 - task_id: F1-T01
 - champion: Gustavo - Gerente de Marketing
 - spec: 04_fase-atual/specs/spec-1-001-nucleo-campanhas-e-permissoes.md
-- etapa: em_correcao
+- etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — "Pode executar" / "Pode fazer" (2026-08-27)
 - teste_humano: pendente
-- verificacao_automatica: falhou — MCP do Skip encerrou a conexão durante a inspeção do projeto 53888; nenhuma alteração funcional foi aplicada
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-08-28-1350-mcp-skip-conexao.md
-- ultima_acao: cron de recuperação fechou a triagem de aprendizado pendente do ciclo F1-T01; nenhuma alteração funcional, de gate ou de task
-- proxima_acao: retomar a construção da F1-T01 quando o MCP do Skip estiver disponível
-- atualizado_em: 2026-08-28T13:50:00-03:00
+- verificacao_automatica: passou — migrations 0001_setup_rbac e 0002_seed_admin aplicadas (31/ago); 401 sem token em /backend/v1/rbac-test; 403 ao criar usuário com role=administrador; roles seeded (4); login admin e usuária comercial validados no preview; build v0.0.3 QA ok
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-08-31-1000-rbac-server-side-skipcloud.md
+- ultima_acao: retomada da F1-T01 com MCP do Skip disponível; RBAC server-side implementado e verificado automaticamente
+- proxima_acao: teste humano no preview (login admin + papel comercial); se aprovado, concluir F1-T01
+- atualizado_em: 2026-08-31T10:05:00-03:00
