@@ -2,11 +2,15 @@
 
 ## 2026-08-31
 
+- F1-T02 concluída (modelagem e persistência de campanhas internas): coleção campaigns, seed de 2 campanhas, hook de validação de período e campos, página de listagem + criação. Teste humano aprovado (screenshot: campanha criada e listada). Build v0.0.6.
+- Aprendizado capturado: hooks do Skip Cloud exigem lógica 100% inline dentro dos callbacks (sem helper top-level) — AP-2026-08-31-1530.
+
+## 2026-08-31 (anterior)
+
 - Verificação independente da F1-T01 encontrou e corrigiu falha de segurança: usuária comum conseguia se autopromover a administrador pela API (e.record em hook de request já refletia o body proposto; comparação atual/novo nunca disparava). Reescritos enforce_role.js e enforce_role_update.js (leitura do papel persistido via $app.findRecordById), migration 0003 com re-seed dos 4 papéis e endurecimento das regras da coleção roles (create/update/delete só administrador). Build v0.0.4 QA ok.
 - Reverificação completa do zero: autopromoção 403 e banco inalterado; signup com papel elevado 403; rbac-test 401 sem token; RLS lista apenas o próprio; catálogo com 4 papéis; mutação de roles por usuário comum negada no servidor.
 - F1-T01 aguardando NOVO teste humano após a correção (login admin no preview deve continuar funcionando).
 - `[champion: Gustavo]` · Task F1-T01 concluída: projeto GoSkip criado e SkipCloud Auth/RBAC interno configurado (campo role + catálogo roles + hooks server-side + rota /backend/v1/rbac-test + frontend login/dashboard). Evidência: preview v0.0.4, migrations 0001-0003 aplicadas, autopromoção 403, signup elevado 403, RLS self-only, screenshot de aprovação do admin.
-- Próxima task elegível após novo pedido: F1-T02 (modelar campanhas internas).
 
 ## 2026-08-27
 
@@ -20,4 +24,4 @@
 
 ## Próximo passo
 
-F1-T01 concluída. Nova seleção de task (F1-T02) somente mediante novo pedido explícito.
+F1-T02 concluída. Próxima task elegível: F1-T03 (lista, filtros e detalhe de campanhas) — nova seleção mediante novo pedido explícito.
