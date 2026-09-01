@@ -2,16 +2,16 @@
 
 **Atualizado em:** 2026-09-01  
 **Fase atual:** Fase 1 — Núcleo de operação e prontidão de campanhas  
-**Estado:** F1-T04 CONCLUÍDA (4/9 tasks — 44%).
+**Estado:** F1-T05 CONCLUÍDA (5/9 tasks — 56%).
 
 ## Ambiente
 
 - Construção: GoSkip.
 - Persistência, autenticação e RBAC: SkipCloud (integrados).
-- Projeto Skip: IA Ferramenta, `projectId 53888`, preview https://ia-ferramenta-562d3--preview.goskip.app (v0.0.17).
-- Migrations aplicadas: `0001_setup_rbac` a `0006_audit_logs`.
-- Hooks de servidor: `enforce_role.js`, `enforce_role_update.js`, `http_permission_test.js`, `validate_campaign.js`, `campaign_guards.js`.
-- Frontend: login + dashboard por papel + campanhas (criar/listar/filtrar/detalhe/histórico/transições/arquivar/restaurar).
+- Projeto Skip: IA Ferramenta, `projectId 53888`, preview https://ia-ferramenta-562d3--preview.goskip.app (v0.0.24).
+- Migrations aplicadas: `0001_setup_rbac` a `0007_pauta_ativos_configuracao`.
+- Hooks de servidor: `enforce_role.js`, `enforce_role_update.js`, `http_permission_test.js`, `validate_campaign.js` (com URL de ativo), `campaign_guards.js`, `pauta_ativos_config_guards.js`.
+- Frontend: login + dashboard por papel + campanhas (criar/listar/filtrar/detalhe/histórico/transições/arquivar/restaurar + pauta/ativos/configuração/pendências).
 
 ## Escopo e SPECs
 
@@ -24,8 +24,9 @@
 - F1-T02: modelar/persistir campanhas — **CONCLUÍDA (31/08/2026)**.
 - F1-T03: lista, filtros e detalhe — **CONCLUÍDA (01/09/2026)**.
 - F1-T04: estados, auditoria, conflito, arquivamento — **CONCLUÍDA (01/09/2026)**.
-- F1-T05 a F1-T09: bloqueadas por dependência; aguardam seleção e autorização.
+- F1-T05: pauta, ativos e configuração declarada — **CONCLUÍDA (01/09/2026)**.
+- F1-T06 a F1-T09: bloqueadas por dependência; aguardam seleção e autorização.
 
 ## Gate
 
-F1-T01 a F1-T04 concluídas com teste humano aprovado (screenshot admin + verificação automatizada). Próximas tasks somente mediante novo pedido, com relatório de análise antes de qualquer implementação.
+F1-T01 a F1-T05 concluídas com teste humano aprovado (screenshots admin) + verificação automatizada. Próximas tasks somente mediante novo pedido, com relatório de análise antes de qualquer implementação.
