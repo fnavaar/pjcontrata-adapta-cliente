@@ -1,17 +1,17 @@
 # STATUS — IA Ferramenta
 
-**Atualizado em:** 2026-08-31  
+**Atualizado em:** 2026-09-01  
 **Fase atual:** Fase 1 — Núcleo de operação e prontidão de campanhas  
-**Estado:** F1-T02 CONCLUÍDA (2/9 tasks — 22%).
+**Estado:** F1-T03 CONCLUÍDA (3/9 tasks — 33%).
 
 ## Ambiente
 
 - Construção: GoSkip.
 - Persistência, autenticação e RBAC: SkipCloud (integrados).
-- Projeto Skip: IA Ferramenta, `projectId 53888`, preview https://ia-ferramenta-562d3--preview.goskip.app (v0.0.6).
-- Migrations aplicadas: `0001_setup_rbac`, `0002_seed_admin`, `0003_reseed_roles_harden_rules`, `0004_create_campaign`, `0005_seed_campaigns`.
+- Projeto Skip: IA Ferramenta, `projectId 53888`, preview https://ia-ferramenta-562d3--preview.goskip.app (v0.0.7).
+- Migrations aplicadas: `0001_setup_rbac` a `0005_seed_campaigns`.
 - Hooks de servidor: `enforce_role.js`, `enforce_role_update.js`, `http_permission_test.js`, `validate_campaign.js`.
-- Frontend: login + dashboard por papel + página de campanhas (criar/listar).
+- Frontend: login + dashboard por papel + campanhas (criar/listar/filtrar/detalhe).
 
 ## Escopo e SPECs
 
@@ -20,10 +20,11 @@
 
 ## Tasks
 
-- F1-T01: criar projeto GoSkip e configurar SkipCloud Auth/RBAC interno — **CONCLUÍDA (31/08/2026)**.
-- F1-T02: modelar e persistir campanhas internas — **CONCLUÍDA (31/08/2026)**.
-- F1-T03 a F1-T09: bloqueadas por dependência; aguardam seleção e autorização.
+- F1-T01: Auth/RBAC — **CONCLUÍDA (31/08/2026)**.
+- F1-T02: modelar/persistir campanhas — **CONCLUÍDA (31/08/2026)**.
+- F1-T03: lista, filtros e detalhe — **CONCLUÍDA (01/09/2026)**.
+- F1-T04 a F1-T09: bloqueadas por dependência; aguardam seleção e autorização.
 
 ## Gate
 
-F1-T01 e F1-T02 concluídas com teste humano aprovado (screenshots admin). Próximas tasks somente mediante novo pedido, com relatório de análise antes de qualquer implementação.
+F1-T01 a F1-T03 concluídas com teste humano aprovado (screenshots admin). Próximas tasks somente mediante novo pedido, com relatório de análise antes de qualquer implementação.
