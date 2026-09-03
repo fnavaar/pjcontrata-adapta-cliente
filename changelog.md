@@ -1,16 +1,24 @@
 # Changelog — IA Ferramenta
 
+## 2026-09-03
+
+- F1-T06 concluída: biblioteca de modelos versionados (campaign_template), rota custom `/backend/v1/aplicar-modelo` (aplica compatível, recusa incompatível/inativo com 400 e configuração intocada), snapshot fixo na campanha (alteração posterior do modelo NÃO reescreve a campanha) e auditoria `aplicar-modelo`. Teste humano aprovado (screenshot: "Modelo aplicado com snapshot (auditado)" na campanha T06 - Debug). Build v0.0.34 QA ok.
+- Aprendizado capturado: JSONField no JSVM do Skip Cloud chega como array de bytes/string — normalizar com String.fromCharCode + JSON.parse (AP-2026-09-03-0934).
+- F1-T07 fica elegível para nova análise (motor de checklist configurável + READY/BLOCKED).
+
+## 2026-09-02
+
+- F1-T06 implementada e verificada automaticamente (aplicar compatível preenche config, recusa 400, snapshot imutável).
+
 ## 2026-09-01
 
 - F1-T05 concluída: pauta (brief), ativos (creative_asset) e configuração declarada (campaign_configuration) vinculados à campanha, com pendências dinâmicas (some ao declarar) e auditoria create:* no histórico. Teste humano aprovado (screenshots: pauta salva, pendências, ativo listado, histórico com create:brief/create:creative_asset). Build v0.0.24 QA ok.
 - Aprendizado capturado: hooks do Skip Cloud não podem ter declarações top-level (JSVM roda callbacks em pool separado) e onRecordAfterCreateSuccess não aceita filtro de coleção — auditoria de create deve usar onRecordCreateRequest com filtro (AP-2026-09-01-1900).
-- F1-T06 fica elegível para nova análise (modelos versionados + snapshot).
 
 ## 2026-09-01
 
-- F1-T04 concluída: transições de estado, auditoria antes/depois (coleção campaign_logs), conflito de edição por version e arquivamento recuperável. Teste humano aprovado (screenshot admin: histórico + restauração) + verificação automatizada (conflito 400, transições 400/200, arquivamento, 18 logs). Build v0.0.17 QA ok. Durante a verificação, o hook de auditoria de create foi corrigido (não podia gravar campaign_id no momento do request create — passou para after-create-success).
+- F1-T04 concluída: transições de estado, auditoria antes/depois (coleção campaign_logs), conflito de edição por version e arquivamento recuperável. Teste humano aprovado (screenshot admin: histórico + restauração) + verificação automatizada (conflito 400, transições 400/200, arquivamento, 18 logs). Build v0.0.17 QA ok.
 - Aprendizado capturado: auditoria de create no Skip Cloud deve ser feita em hook pós-commit (onRecordAfterCreateSuccess); request hook de create não tem id do novo registro (AP-2026-09-01-1438).
-- F1-T05 selecionada para análise (pauta, ativos e configuração declarada).
 
 ## 2026-09-01
 
@@ -21,7 +29,7 @@
 
 - F1-T02 concluída (modelagem e persistência de campanhas internas): coleção campaigns, seed de 2 campanhas, hook de validação de período e campos, página de listagem + criação. Teste humano aprovado (screenshot: campanha criada e listada). Build v0.0.6.
 - Aprendizado capturado: hooks do Skip Cloud exigem lógica 100% inline dentro dos callbacks (sem helper top-level) — AP-2026-08-31-1530.
-- Verificação independente da F1-T01 encontrou e corrigiu falha de segurança: usuária comum conseguia se autopromover a administrador pela API (e.record em hook de request já refletia o body proposto; comparação atual/novo nunca disparava). Reescritos enforce_role.js e enforce_role_update.js (leitura do papel persistido via $app.findRecordById), migration 0003 com re-seed dos 4 papéis e endurecimento das regras da coleção roles (create/update/delete só administrador). Build v0.0.4 QA ok.
+- Verificação independente da F1-T01 encontrou e corrigiu falha de segurança: usuária comum conseguia se autopromover a administrador pela API. Reescritos enforce_role.js e enforce_role_update.js (leitura do papel persistido via $app.findRecordById), migration 0003, build v0.0.4 QA ok.
 - `[champion: Gustavo]` · Task F1-T01 concluída: projeto GoSkip criado e SkipCloud Auth/RBAC interno configurado. Evidência: preview v0.0.4, migrations 0001-0003, autopromoção 403, signup elevado 403, RLS self-only, screenshot admin.
 
 ## 2026-08-27
@@ -35,4 +43,4 @@
 
 ## Próximo passo
 
-F1-T05 concluída. Próxima task elegível: F1-T06 (biblioteca de modelos versionados + snapshot) — nova seleção mediante novo pedido explícito.
+F1-T06 concluída. Próxima task elegível: F1-T07 (motor de checklist configurável, pendências e READY/BLOCKED) — nova seleção mediante novo pedido explícito.

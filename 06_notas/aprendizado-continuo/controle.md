@@ -7,3 +7,4 @@
 - 2026-09-01T14:00:00-03:00 · task F1-T03 · capturado: AP-2026-09-01-1400-rbac-leitura-mutacao.md
 - 2026-09-01T14:38:00-03:00 · task F1-T04 · capturado: AP-2026-09-01-1438-auditoria-create-pos-commit.md
 - 2026-09-01T19:00:00-03:00 · task F1-T05 · capturado: AP-2026-09-01-1900-hook-scoping-jsvm-create-request-filtro.md
+- 2026-09-03T09:34:00-03:00 · task F1-T06 · capturado: AP-2026-09-03-0934-jsonfield-bytes-jsvm.md
