@@ -9,3 +9,4 @@
 - 2026-09-01T19:00:00-03:00 · task F1-T05 · capturado: AP-2026-09-01-1900-hook-scoping-jsvm-create-request-filtro.md
 - 2026-09-03T09:34:00-03:00 · task F1-T06 · capturado: AP-2026-09-03-0934-jsonfield-bytes-jsvm.md
 - 2026-09-03T10:25:00-03:00 · task F1-T07 · capturado: AP-2026-09-03-1025-loop-aftercreate-generico.md
+- 2026-09-03T10:40:00-03:00 · task F1-T08 · capturado: AP-2026-09-03-1040-invalidacao-aprovacao-multi-colecao.md
