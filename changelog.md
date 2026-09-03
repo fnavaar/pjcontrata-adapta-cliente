@@ -2,9 +2,14 @@
 
 ## 2026-09-03
 
+- F1-T07 concluída: motor de checklist determinístico (checklist_rule + checklist_evaluation + seeds), recálculo automático em mudanças de campanha/config/ativos/brief, decisão READY/BLOCKED com itens PASS/FAIL/PENDING/NOT_APPLICABLE e ação sugerida, regra ausente → BLOCKED sem fallback. Rota custom `POST /backend/v1/recalcular-checklist` para campanhas pré-existentes. Teste humano aprovado (screenshot admin: checklist com 12 PASS + 1 FAIL ativo com ação, badge BLOCKED). Build v0.0.44 QA ok.
+- Aprendizado capturado: onRecordAfterCreateSuccess/AfterUpdateSuccess genéricos processam TODAS as coleções — ao gravar checklist_evaluation dentro do hook, entrava em loop infinito (861 avaliações em 1 campanha); corrigido com guarda de coleção (AP-2026-09-03-1025).
+- F1-T08 fica elegível para nova análise (aprovação auditada e invalidação).
+
+## 2026-09-03
+
 - F1-T06 concluída: biblioteca de modelos versionados (campaign_template), rota custom `/backend/v1/aplicar-modelo` (aplica compatível, recusa incompatível/inativo com 400 e configuração intocada), snapshot fixo na campanha (alteração posterior do modelo NÃO reescreve a campanha) e auditoria `aplicar-modelo`. Teste humano aprovado (screenshot: "Modelo aplicado com snapshot (auditado)" na campanha T06 - Debug). Build v0.0.34 QA ok.
 - Aprendizado capturado: JSONField no JSVM do Skip Cloud chega como array de bytes/string — normalizar com String.fromCharCode + JSON.parse (AP-2026-09-03-0934).
-- F1-T07 fica elegível para nova análise (motor de checklist configurável + READY/BLOCKED).
 
 ## 2026-09-02
 
@@ -43,4 +48,4 @@
 
 ## Próximo passo
 
-F1-T06 concluída. Próxima task elegível: F1-T07 (motor de checklist configurável, pendências e READY/BLOCKED) — nova seleção mediante novo pedido explícito.
+F1-T07 concluída. Próxima task elegível: F1-T08 (aprovação auditada e invalidação) — nova seleção mediante novo pedido explícito.
