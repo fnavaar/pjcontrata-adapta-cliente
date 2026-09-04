@@ -10,4 +10,4 @@
 | F1-T06 | Modelos versionados + snapshot | CONCLUÍDA (03/09/2026) |
 | F1-T07 | Checklist de prontidão + READY/BLOCKED | CONCLUÍDA (03/09/2026) |
 | F1-T08 | Aprovação humanizada + invalidação | CONCLUÍDA (03/09/2026) |
-| F1-T09 | Prévia determinística + prova de não integração | ELEGÍVEL |
+| F1-T09 | Prévia determinística + prova de não integração | CONCLUÍDA (04/09/2026) |
