@@ -1,5 +1,9 @@
 # Changelog — IA Ferramenta
 
+## 2026-09-04
+
+- 2026-09-04 · [champion: Gustavo] · Task F1-T09 concluída: prévia determinística + prova de não integração. Rota custom `GET /backend/v1/previa/{campaignId}` (autenticada) monta JSON determinístico só com dados internos (campanha, configuração, ativos, pauta, modelo/snapshot, checklist, aprovação) + bloco `fase2_nao_configurados` (todos null/"não configurado") + metadados (gerado_em, fonte "dados internos", integracao_externa "nenhuma"); seção "Prévia determinística" no detalhe da campanha (sem botão de publicar). Evidência: build v0.0.49 QA ok; testes de API 200/401/404; prova de não integração (nenhum fetch externo/credencial nos hooks e migrations; frontend só chama /backend/v1); teste humano aprovado com screenshot (dados reais + Fase 2 não configurado). Aprendizado AP-2026-09-04-1132 (skip_file_patch cirúrgico para arquivos grandes). **Fase 1 100% (9/9).**
+
 ## 2026-09-03
 
 - F1-T07 concluída: motor de checklist determinístico (checklist_rule + checklist_evaluation + seeds), recálculo automático em mudanças de campanha/config/ativos/brief, decisão READY/BLOCKED com itens PASS/FAIL/PENDING/NOT_APPLICABLE e ação sugerida, regra ausente → BLOCKED sem fallback. Rota custom `POST /backend/v1/recalcular-checklist` para campanhas pré-existentes. Teste humano aprovado (screenshot admin: checklist com 12 PASS + 1 FAIL ativo com ação, badge BLOCKED). Build v0.0.44 QA ok.
@@ -48,4 +52,4 @@
 
 ## Próximo passo
 
-F1-T07 concluída. Próxima task elegível: F1-T08 (aprovação auditada e invalidação) — nova seleção mediante novo pedido explícito.
+F1-T09 concluída — **Fase 1 100% (9/9)**. Fase 1 encerra somente via liberar-fase do consultor (envio de nova fase/SPECs). Não iniciar nova task.
