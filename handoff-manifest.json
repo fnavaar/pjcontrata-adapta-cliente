@@ -1,28 +1,24 @@
 {
-  "schema": "adapta-client-handoff/v1",
-  "project": "IA Ferramenta",
-  "createdAt": "2026-08-27",
-  "phase": 1,
-  "scopeBoundary": "Aquisição própria da IA Ferramenta; não inclui operação de campanhas para clientes, tenancy/multiempresa, CRM, WhatsApp ou integrações produtivas.",
-  "destination": "adapta-cliente",
-  "environment": {
-    "builder": "GoSkip",
-    "backend": "SkipCloud",
-    "repository": "not-created",
-    "automatedValidationCommands": "not-defined"
+  "version": 3,
+  "generated_at": "2026-09-11",
+  "phase": "2",
+  "source_head": "51072cad4ef962418bb5570c41964c83133e0388",
+  "validation": {
+    "active_unit": "04_fase-atual",
+    "active_specs": ["SPEC-2-001", "SPEC-2-002", "SPEC-2-003"],
+    "tasks": 9,
+    "criteria": "17/17",
+    "only_eligible_task": "F2-T01",
+    "phase_1_archive": "05_entregas/fase-1",
+    "legacy_active_unit_removed": true,
+    "production_or_spend_authorized": false
   },
-  "allowedContents": [
-    "README.md",
-    "01-configuracoes/ambiente-fase-1.md",
-    "02-fase-atual/fase.md",
-    "02-fase-atual/SPEC-1-001 — Núcleo de campanhas e permissões internas.md",
-    "02-fase-atual/SPEC-1-002 — Ativos, modelos e planejamento.md",
-    "02-fase-atual/SPEC-1-003 — Checklist, aprovação e prévia.md",
-    "03-documentos/STATUS.md",
-    "03-documentos/changelog.md"
-  ],
-  "excludedContents": [
-    "Escopo base", "análise crítica", "análise do consultor", "direções", "requisitos", "revisões", "decisões internas", ".adapta", "fases futuras", "reuniões brutas", "metodologia", "segredos e credenciais"
-  ],
-  "repositoryOrPublication": "not-authorized"
+  "sealed_files": {
+    "04_fase-atual/00-Tasks_Gerais.md": "47212e55e752a9ac04246b88d02e70aa1518ab88f609c9d64bdb3f050ef5ca86",
+    "04_fase-atual/fase.md": "8a5b5f1561cf1c23b5a257e555b4f23d66ee091f4a676bb96c54ca1b9d2c3d31",
+    "04_fase-atual/specs/spec-2-001-meta-publicacao-controlada.md": "0b91c1a6b8ec8a3d42fa786d2e923ca624c2c566925d5eccd6f6868a34e775fd",
+    "04_fase-atual/specs/spec-2-002-google-publicacao-controlada.md": "9945c7613d5361a38f33e4d19a26f0f7ead15834ca333af3a53d26616d099243",
+    "04_fase-atual/specs/spec-2-003-orquestracao-auditoria-recuperacao.md": "2f830bbf03e9242a59cd7362e60f97f449c4ebbc6729d02e512aadd9a97d8df8",
+    "05_entregas/fase-1/fase.md": "d39fa242c202793ab20ec1ea3d9d5aa3f68524656bc34aa37b1aa08ee99ae94b"
+  }
 }

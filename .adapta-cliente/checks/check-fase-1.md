@@ -1,0 +1,5 @@
+active-sha256=27bb68e2e9618e76a7121834cc6e9ad06d5fdae2443ef24e2ddead12e8c991b1
+head=51072cad4ef962418bb5570c41964c83133e0388
+aprovador=Navaar
+data=2026-09-11
+regressao_humana=aprovada
