@@ -3,7 +3,7 @@
 <!-- fase-format:2 -->
 
 - [x] F2-T01: Contrato transversal, tentativa e máquina de estados com adaptador fake [interno] — concluída 14/09/2026 <!-- id:5cdcc18d-7266-4be2-9584-9ee4b29139c7 -->
-- [ ] F2-T02: Idempotência, log append-only sanitizado e recibos [interno] <!-- id:77439ea4-35f1-4b47-ad66-38c8962fbcd3 -->
+- [x] F2-T02: Idempotência, log append-only sanitizado e recibos [interno] — concluída 14/09/2026 <!-- id:77439ea4-35f1-4b47-ad66-38c8962fbcd3 -->
 - [ ] F2-T03: Prova de autorização e conta Meta de teste/autorizada [interno] <!-- id:50d1a5e6-1b9c-43f2-a488-34a1e527175a -->
 - [ ] F2-T04: Publicação Meta pausada, confirmada e idempotente [interno] <!-- id:33d5ed48-e550-4a39-a5a2-f38a5ae6a9ec -->
 - [ ] F2-T05: Falha parcial, timeout e reconciliação Meta [interno] <!-- id:af45e76a-1c54-45bc-a077-7290e8b8c86a -->
