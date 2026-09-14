@@ -24,3 +24,12 @@
 - Verificação automatizada: 23/23 (CA-2-011 RBAC, CA-2-012 idempotência, CA-2-013 auditoria sem segredo, CA-2-014 parcial/timeout→reconciliação, CA-2-016 revogação/reativação, RN-226 sanitização; regressão F1 3/3).
 - Bugs corrigidos durante verificação: zero-date do PocketBase em revoked_at era truthy; resposta do adaptador sem estados dos objetos.
 - Teste humano aprovado pelo owner (14/09/2026): publicação da campanha T-F2-PUB2 confirmada em CONFIRMED_PAUSED com 4 objetos PAUSED e trilha de auditoria visível.
+
+## 2026-09-14 — F2-T02 concluída
+
+- F2-T02 concluída: idempotência, log append-only sanitizado e recibos (builds v0.0.104–v0.0.105).
+- CA-2-012: resposta idempotente distingue estados terminais (em_progresso=false) de intermediários (em_progresso=true); concorrência coberta por catch de unique constraint devolvendo a tentativa vencedora — provado com 5 requests simultâneos → 1 única tentativa, nenhum 500.
+- CA-2-013: PEDIDO_CRIADO persiste payload_hash; eventos terminais persistem resposta estruturada (estado + objetos + erro sanitizado); trilha sem segredos (RN-226).
+- CA-2-017: recibo versionado instituído em 05_entregas/fase-2/recibo-F2-T02.md (padrão para a fase).
+- Verificação: 15/15 automatizados + revalidação final no fechamento; regressão F2-T01 e F1 passando.
+- Teste humano aprovado pelo owner (14/09/2026): 3 publicações da T-F2-PUB2 → 1 única tentativa, mesmo payload_hash, nada duplicado.
