@@ -1,8 +1,8 @@
 # STATUS — Engaja PJ
 
-**Atualizado em:** 2026-09-11
+**Atualizado em:** 2026-09-14
 **Fase atual:** Fase 2 — Publicação controlada e recuperação
-**Estado:** Fase 2 liberada documentalmente; nenhuma implementação F2 iniciada.
+**Estado:** F2-T01 concluída (1/9 — 11%); F2-T02 é a próxima elegível, aguardando pedido do champion.
 
 ## Fase 1
 
@@ -15,7 +15,8 @@
 - SPEC-2-001 Meta Ads.
 - SPEC-2-002 Google Ads.
 - SPEC-2-003 orquestração, auditoria e recuperação.
-- F2-T01..F2-T09 geradas; somente F2-T01 está elegível.
+- F2-T01 concluída (14/09/2026): núcleo transversal de publicação — 4 coleções (ad_connection, publication_attempt, remote_object, publication_event), máquina de 9 estados (ACTIVE proibido), validação server-side CA-2-011, idempotência CA-2-012, auditoria append-only CA-2-013, reconciliação CA-2-014, revogação CA-2-016. Build v0.0.103; 23/23 testes automatizados + regressão F1; teste humano aprovado pelo owner (14/09).
+- F2-T02..F2-T09 pendentes; F2-T02 é a próxima elegível.
 
 ## Limites
 
