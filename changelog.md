@@ -53,3 +53,13 @@
 - Cadeia aplicável na sandbox = campaign+adset (creative/ad exigem Página — limitação Meta; falha parcial é território da F2-T05).
 - Verificação: 12/12 automatizados + revalidação final 9/9 com prova fresca na Meta.
 - Teste humano aprovado pelo owner (16/09/2026): publicação real da T-F2-PUB2 (campaign 120330***615 + adset 120330***215, PAUSED), retry sem duplicar, campanha confirmada na API da Meta.
+
+## 2026-09-16 — F2-T05 implementada (aguardando teste humano)
+
+- F2-T05: falha parcial, timeout e reconciliação Meta (builds v0.0.111–v0.0.117).
+- Migration 0013: campo remote_id_real em remote_object (interno, nunca exposto — RN-226).
+- Credencial expirada (code 190) → BLOCKED com erro "renovar fora do log" — zero falso sucesso (CA-2-005).
+- Falha parcial preserva a campaign criada (RN-205) com ID real para recuperação.
+- Reconciliação REAL: UNCERTAIN consulta objetos na Meta pelo ID real; PARTIAL_FAILURE completa o adset faltante REAL (idempotente) → RECOVERED.
+- RN-226 reforçado: eventos e resposta estruturada sem remote_id_real (vazamento corrigido v0.0.116/117).
+- Verificação: 9/9 com falha parcial provocada por orçamento rejeitado pela Meta (rejeição real) e adset recriado verificado na API da Meta.
