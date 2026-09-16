@@ -33,3 +33,12 @@
 - CA-2-017: recibo versionado instituído em 05_entregas/fase-2/recibo-F2-T02.md (padrão para a fase).
 - Verificação: 15/15 automatizados + revalidação final no fechamento; regressão F2-T01 e F1 passando.
 - Teste humano aprovado pelo owner (14/09/2026): 3 publicações da T-F2-PUB2 → 1 única tentativa, mesmo payload_hash, nada duplicado.
+
+## 2026-09-16 — F2-T03 concluída
+
+- F2-T03 concluída: prova de autorização e conta Meta de teste (CA-2-001).
+- Sandbox Meta criada pelo owner: act_1585807056675719 ("New Sandbox Ad Account", BRL, America/Sao_Paulo) no app "API oficial CRM" (1004482402468681).
+- Prova read-only executada: identidade do token (Sandbox Ad Account Owner — token de sistema da sandbox), conta ativa, listagem de campanhas vazia; escopo mínimo ads_management+ads_read; nenhum segredo exposto.
+- Token gravado nos secrets do Skip Cloud (META_ACCESS_TOKEN, META_SANDBOX_ACCOUNT_ID); conta cadastrada na allowlist (ad_connection ogzfs36ibb8tzbl, environment teste).
+- Iteração relevante: token do Graph API Explorer não acessava a sandbox (403); resolvido com token gerado pela chave da própria sandbox (nasce vinculado ao ativo).
+- Teste humano aprovado pelo owner (16/09/2026): "sim" após demonstração da prova.
