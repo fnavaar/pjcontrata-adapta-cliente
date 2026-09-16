@@ -42,3 +42,14 @@
 - Token gravado nos secrets do Skip Cloud (META_ACCESS_TOKEN, META_SANDBOX_ACCOUNT_ID); conta cadastrada na allowlist (ad_connection ogzfs36ibb8tzbl, environment teste).
 - Iteração relevante: token do Graph API Explorer não acessava a sandbox (403); resolvido com token gerado pela chave da própria sandbox (nasce vinculado ao ativo).
 - Teste humano aprovado pelo owner (16/09/2026): "sim" após demonstração da prova.
+
+## 2026-09-16 — F2-T04 concluída
+
+- F2-T04 concluída: publicação Meta pausada, confirmada e idempotente (build v0.0.110).
+- Adaptador Meta real no publicacao_nucleo.js: sem modo_fake, cria campaign+adset reais na sandbox (Marketing API v21.0) sempre PAUSED; token lido dos secrets do Skip.
+- Confirmação por consulta (GET status) antes de marcar CONFIRMED_PAUSED — 2xx isolado não é sucesso.
+- Idempotência real: retry da mesma chave devolve a tentativa existente sem recriar nada na Meta (provado: 1 campanha T-F2T04-REAL na sandbox após retry).
+- Parâmetros obrigatórios descobertos no baseline: special_ad_categories=[], is_adset_budget_sharing_enabled=false, daily_budget mínimo 1000 centavos (sandbox).
+- Cadeia aplicável na sandbox = campaign+adset (creative/ad exigem Página — limitação Meta; falha parcial é território da F2-T05).
+- Verificação: 12/12 automatizados + revalidação final 9/9 com prova fresca na Meta.
+- Teste humano aprovado pelo owner (16/09/2026): publicação real da T-F2-PUB2 (campaign 120330***615 + adset 120330***215, PAUSED), retry sem duplicar, campanha confirmada na API da Meta.
