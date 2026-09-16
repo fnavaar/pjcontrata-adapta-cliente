@@ -14,3 +14,4 @@
 - 2026-09-14T09:05:00-03:00 · task F2-T01 · capturado: AP-2026-09-14-0905-zero-date-pocketbase.md · zero-date truthy em campo date opcional bloqueava conexões válidas
 - 2026-09-14T11:30:00-03:00 · task F2-T02 · capturado: AP-2026-09-14-1130-unique-catch-idempotente.md · unique index + catch devolve vencedora como resposta idempotente
 - 2026-09-16T14:25:00-03:00 · task F2-T03 · capturado: AP-2026-09-16-1425-token-chave-sandbox.md · token pela chave da sandbox nasce vinculado ao ativo; Explorer não acessa sandbox
+- 2026-09-16T15:20:00-03:00 · task F2-T04 · capturado: AP-2026-09-16-1520-parametros-obrigatorios-meta.md · payload mínimo campaign/adset na v21 e mínimo de orçamento da sandbox
