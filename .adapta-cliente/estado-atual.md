@@ -1,16 +1,17 @@
 # Estado atual — Adapta Cliente
 
-- task_id: nenhuma (F2-T02 concluída)
+- task_id: F2-T03
 - champion: Gustavo - Gerente de Marketing
-- spec: 04_fase-atual/specs/spec-2-003-orquestracao-auditoria-recuperacao.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada (14/09/2026 09:44 — "sim" em resposta ao relatório de análise da F2-T02)
-- teste_humano: aprovado (14/09/2026 11:28 — "ok" após demonstração: 3 publicações da T-F2-PUB2 → 1 única tentativa, mesmo payload_hash, nada duplicado)
+- spec: 04_fase-atual/specs/spec-2-001-meta-publicacao-controlada.md (pré-condição CA-2-001)
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada (16/09/2026 — owner forneceu acesso e acompanhou a prova)
+- teste_humano: pendente
 - verificacao_automatica: passou
-  - build v0.0.105 QA ok (setup + static + build + integrations + test)
-  - bateria F2-T02: 15/15 (CA-2-012 retry/concorrência/em_progresso, CA-2-013 payload_hash + resposta estruturada, RN-226, recibo; regressão F2-T01 e F1)
-  - revalidação final no fechamento: 10/11 com 1 artefato de teste (race reproduzido limpo depois: 5 simultâneos → 1 tentativa, nenhum 500)
-- aprendizado: capturado: 06_notas/aprendizado-continuo/AP-2026-09-14-1130-unique-catch-idempotente.md
-- ultima_acao: F2-T02 concluída — fase.md, STATUS.md, changelog.md, recibo com aceite e estado atualizados
-- proxima_acao: aguardar pedido do champion para analisar a F2-T03 (prova de autorização e conta Meta de teste)
-- atualizado_em: 2026-09-14T11:35:00-03:00
+  - prova read-only CA-2-001: /me (identidade), /act_1585807056675719 (conta ativa, BRL, SP), /campaigns (vazio)
+  - token válido com escopo mínimo ads_management+ads_read; sem segredo em qualquer saída
+  - allowlist: ad_connection ogzfs36ibb8tzbl (meta, environment teste, enabled)
+  - secrets: META_ACCESS_TOKEN + META_SANDBOX_ACCOUNT_ID gravados no Skip Cloud
+- aprendizado: pendente
+- ultima_acao: prova de acesso executada e passou; token nos secrets; conta na allowlist; recibo emitido
+- proxima_acao: teste humano (owner confirma a prova); depois concluir F2-T03 e liberar F2-T04
+- atualizado_em: 2026-09-16T14:20:00-03:00
