@@ -1,6 +1,6 @@
 # Recibo — F2-T05: Falha parcial, timeout e reconciliação Meta
 
-- **Data:** 2026-09-16
+- **Data:** 2026-09-16 (implementação) / 2026-09-17 (conclusão)
 - **SPEC:** SPEC-2-001 (Meta — publicação controlada)
 - **Build:** v0.0.111–v0.0.117 (QA ok em todos os applies)
 - **Champion:** Gustavo — Gerente de Marketing
@@ -46,4 +46,4 @@
 
 ## Aceite humano
 
-- Pendente no momento da emissão deste recibo.
+- APROVADO pelo owner (Tarcísio Miranda) em 17/09/2026, 08:31 — "sim" após demonstração ao vivo: falha parcial REAL (orçamento rejeitado pela Meta), estado PARTIAL_FAILURE visível com erro real, reconciliação → RECOVERED com adset REAL criado na Meta em PAUSED (verificado na API da Meta), trilha append-only completa.

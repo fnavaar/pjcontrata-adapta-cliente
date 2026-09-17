@@ -54,7 +54,7 @@
 - Verificação: 12/12 automatizados + revalidação final 9/9 com prova fresca na Meta.
 - Teste humano aprovado pelo owner (16/09/2026): publicação real da T-F2-PUB2 (campaign 120330***615 + adset 120330***215, PAUSED), retry sem duplicar, campanha confirmada na API da Meta.
 
-## 2026-09-16 — F2-T05 implementada (aguardando teste humano)
+## 2026-09-16 — F2-T05 implementada
 
 - F2-T05: falha parcial, timeout e reconciliação Meta (builds v0.0.111–v0.0.117).
 - Migration 0013: campo remote_id_real em remote_object (interno, nunca exposto — RN-226).
@@ -63,3 +63,11 @@
 - Reconciliação REAL: UNCERTAIN consulta objetos na Meta pelo ID real; PARTIAL_FAILURE completa o adset faltante REAL (idempotente) → RECOVERED.
 - RN-226 reforçado: eventos e resposta estruturada sem remote_id_real (vazamento corrigido v0.0.116/117).
 - Verificação: 9/9 com falha parcial provocada por orçamento rejeitado pela Meta (rejeição real) e adset recriado verificado na API da Meta.
+
+## 2026-09-17 — F2-T05 concluída
+
+- Teste humano aprovado pelo owner (17/09/2026, 08:31): "sim" após demonstração ao vivo.
+- Demonstração: campanha DEMO-F2T05 publicada com orçamento acima do limite da sandbox → rejeição REAL da Meta → PARTIAL_FAILURE com erro visível e campaign preservada (RN-205); orçamento corrigido → reconciliação → RECOVERED com adset REAL criado na Meta (PAUSED, R$ 10/dia, verificado na API da Meta, 1 único — idempotente).
+- Recibo 05_entregas/fase-2/recibo-F2-T05.md com aceite registrado.
+- Aprendizado AP-2026-09-17-0835: par (ID mascarado p/ exibição, ID real p/ operação server-side); RN-226 em TODAS as superfícies de saída incl. eventos; RECOVERY_PENDING não volta a PARTIAL_FAILURE.
+- Fase 2: 5/9 (56%). Próxima elegível: F2-T06 (prova Google — depende de acesso do Gustavo).

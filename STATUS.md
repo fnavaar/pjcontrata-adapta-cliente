@@ -1,8 +1,8 @@
 # STATUS — Engaja PJ
 
-**Atualizado em:** 2026-09-16
+**Atualizado em:** 2026-09-17
 **Fase atual:** Fase 2 — Publicação controlada e recuperação
-**Estado:** F2-T01..F2-T04 concluídas (4/9 — 44%); F2-T05 implementada e verificada (9/9), aguardando teste humano.
+**Estado:** F2-T01..F2-T05 concluídas (5/9 — 56%); F2-T06 é a próxima elegível (prova Google — depende de acesso do Gustavo).
 
 ## Fase 1
 
@@ -19,7 +19,7 @@
 - F2-T02 concluída (14/09/2026): idempotência completa, trilha append-only reconstrutível, recibo versionado instituído. Build v0.0.105; 15/15 testes; teste humano aprovado pelo owner (14/09).
 - F2-T03 concluída (16/09/2026): prova de acesso Meta (CA-2-001) — sandbox act_1585807056675719, token nos secrets, allowlist. Recibo; aceite do owner.
 - F2-T04 concluída (16/09/2026): adaptador Meta real — publicação na sandbox sempre PAUSED, confirmação por consulta, idempotência real. Build v0.0.110; 12/12 testes; teste humano aprovado pelo owner (16/09).
-- F2-T05 implementada (16/09/2026): falha parcial com preservação RN-205, credencial expirada → BLOCKED, reconciliação REAL via remote_id_real. Build v0.0.117; 9/9 testes; aguardando teste humano do owner.
+- F2-T05 concluída (17/09/2026): falha parcial com preservação RN-205, credencial expirada → BLOCKED, reconciliação REAL via remote_id_real. Build v0.0.117; 9/9 testes; teste humano aprovado pelo owner após demonstração ao vivo (falha real na Meta + recuperação com adset real verificado na API da Meta).
 - F2-T06..F2-T09 pendentes.
 
 ## Limites
