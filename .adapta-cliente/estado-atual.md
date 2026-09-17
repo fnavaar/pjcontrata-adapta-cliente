@@ -1,13 +1,14 @@
 # Estado atual — Adapta Cliente
 
-- task_id: F2-T05
+- task_id: F2-T06
 - champion: Gustavo - Gerente de Marketing
-- spec: 04_fase-atual/specs/spec-2-001-meta-publicacao-controlada.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada (16/09/2026 15:50)
-- teste_humano: aprovado (17/09/2026 08:31 — "sim" após demonstração ao vivo de falha real + recuperação real)
-- verificacao_automatica: passou (9/9, build v0.0.117)
-- aprendizado: ok (AP-2026-09-17-0835)
-- ultima_acao: F2-T05 concluída; fechamento commitado
-- proxima_acao: F2-T06 é a próxima elegível (prova Google — depende de acesso do Gustavo); aguarda pedido do champion
-- atualizado_em: 2026-09-17T08:35:00-03:00
+- spec: 04_fase-atual/specs/spec-2-002-google-publicacao-controlada.md
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente
+- teste_humano: pendente
+- verificacao_automatica: pendente
+- aprendizado: pendente
+- bloqueio: prova de acesso Google (CA-2-006) exige credenciais que não existem no projeto — GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN, GOOGLE_DEVELOPER_TOKEN, GOOGLE_TEST_CUSTOMER_ID (secrets Skip verificados 17/09: só META_* presentes); MCP googleads sem conta conectada; dono da resolução: Tarcísio (fornecer credenciais)
+- ultima_acao: análise profunda da F2-T06 concluída (plano B da SPEC: rota read-only com BLOCKED_ACCESS enquanto credenciais ausentes + estrutura pronta para a prova quando chegarem)
+- proxima_acao: aguardar autorização para implementar
+- atualizado_em: 2026-09-17T09:40:00-03:00
