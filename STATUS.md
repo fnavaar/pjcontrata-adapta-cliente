@@ -1,8 +1,8 @@
 # STATUS — Engaja PJ
 
-**Atualizado em:** 2026-09-17
+**Atualizado em:** 2026-09-18
 **Fase atual:** Fase 2 — Publicação controlada e recuperação
-**Estado:** F2-T01..F2-T05 concluídas (5/9 — 56%); F2-T06 é a próxima elegível (prova Google — depende de acesso do Gustavo).
+**Estado:** F2-T01..F2-T06 concluídas (6/9 — 67%); F2-T07 é a próxima elegível — pendência: conta de teste Google Ads (UI do Google prende no assistente de campanha; tentar suporte Google Ads, app mobile ou MCC real).
 
 ## Fase 1
 
@@ -15,12 +15,13 @@
 - SPEC-2-001 Meta Ads.
 - SPEC-2-002 Google Ads.
 - SPEC-2-003 orquestração, auditoria e recuperação.
-- F2-T01 concluída (14/09/2026): núcleo transversal de publicação — 4 coleções (ad_connection, publication_attempt, remote_object, publication_event), máquina de 9 estados (ACTIVE proibido), validação server-side CA-2-011, idempotência CA-2-012, auditoria append-only CA-2-013, reconciliação CA-2-014, revogação CA-2-016. Build v0.0.103; 23/23 testes + regressão F1; teste humano aprovado pelo owner (14/09).
-- F2-T02 concluída (14/09/2026): idempotência completa, trilha append-only reconstrutível, recibo versionado instituído. Build v0.0.105; 15/15 testes; teste humano aprovado pelo owner (14/09).
-- F2-T03 concluída (16/09/2026): prova de acesso Meta (CA-2-001) — sandbox act_1585807056675719, token nos secrets, allowlist. Recibo; aceite do owner.
-- F2-T04 concluída (16/09/2026): adaptador Meta real — publicação na sandbox sempre PAUSED, confirmação por consulta, idempotência real. Build v0.0.110; 12/12 testes; teste humano aprovado pelo owner (16/09).
-- F2-T05 concluída (17/09/2026): falha parcial com preservação RN-205, credencial expirada → BLOCKED, reconciliação REAL via remote_id_real. Build v0.0.117; 9/9 testes; teste humano aprovado pelo owner após demonstração ao vivo (falha real na Meta + recuperação com adset real verificado na API da Meta).
-- F2-T06..F2-T09 pendentes.
+- F2-T01 concluída (14/09/2026): núcleo transversal de publicação — 4 coleções, máquina de 9 estados, validação server-side, idempotência, auditoria append-only, revogação. Build v0.0.103; 23/23 testes; aceite do owner (14/09).
+- F2-T02 concluída (14/09/2026): idempotência completa, trilha append-only reconstrutível, recibo versionado. Build v0.0.105; 15/15 testes; aceite do owner (14/09).
+- F2-T03 concluída (16/09/2026): prova de acesso Meta (CA-2-001) — sandbox, token nos secrets, allowlist. Recibo; aceite do owner.
+- F2-T04 concluída (16/09/2026): adaptador Meta real — publicação na sandbox sempre PAUSED, confirmação por consulta, idempotência real. Build v0.0.110; 12/12 testes; aceite do owner (16/09).
+- F2-T05 concluída (17/09/2026): falha parcial com preservação RN-205, credencial expirada → BLOCKED, reconciliação REAL via remote_id_real. Build v0.0.117; 9/9 testes; aceite do owner após demo ao vivo (17/09).
+- F2-T06 concluída (18/09/2026): prova de acesso Google (CA-2-006) — rota read-only /backend/v1/google/prova-acesso com BLOCKED_ACCESS sem credenciais e PROVA_OK com credenciais reais (OAuth válido, 4 customers listados e classificados contra allowlist, IDs mascarados, zero mutação). Credenciais OAuth do projeto agenda-hub nos secrets (client ID/secret/refresh token). Pendência transferida para F2-T07: conta de teste Google Ads (UI do Google prende o fluxo de criação num assistente de campanha que exige cartão — 3 rascunhos inertes sem cobrança). Build v0.0.118; 6/6 testes.
+- F2-T07..F2-T09 pendentes.
 
 ## Limites
 
