@@ -8,6 +8,6 @@
 - [x] F2-T04: Publicação Meta pausada, confirmada e idempotente [interno] — concluída 16/09/2026 <!-- id:33d5ed48-e550-4a39-a5a2-f38a5ae6a9ec -->
 - [x] F2-T05: Falha parcial, timeout e reconciliação Meta [interno] — concluída 17/09/2026 (aceite humano após demo de falha real + recuperação real) <!-- id:af45e76a-1c54-45bc-a077-7290e8b8c86a -->
 - [x] F2-T06: Prova OAuth, developer token, nível e customer Google de teste [interno] — concluída 18/09/2026 (PROVA_OK com credenciais OAuth reais; conta de teste Ads transferida como pendência explícita da F2-T07 — UI do Google prende no assistente de campanha) <!-- id:b14ed91b-fc20-4149-bc8d-75576a06c9fd -->
-- [ ] F2-T07: Publicação Google pausada, confirmada e idempotente [interno] — pendência: criar conta de teste (MCC de teste) e cadastrar na allowlist <!-- id:7dc8ec82-9fe7-449e-952e-a8f7ccdf97a0 -->
-- [ ] F2-T08: Partial failure, timeout e reconciliação Google [interno] <!-- id:fe2ac273-4d1b-443d-9817-151d77f413c8 -->
+- [x] F2-T07: Publicação Google pausada, confirmada e idempotente [interno] — concluída 22/09/2026 (adaptador Google real + gates; publicação real exercita quando a conta de teste chegar na allowlist) <!-- id:7dc8ec82-9fe7-449e-952e-a8f7ccdf97a0 -->
+- [ ] F2-T08: Partial failure, timeout e reconciliação Google [interno] — pendência: conta de teste Google Ads <!-- id:fe2ac273-4d1b-443d-9817-151d77f413c8 -->
 - [ ] F2-T09: Painel transversal de reconciliação e recuperação assistida [interno] <!-- id:838f337e-43de-47d9-9293-1949a1bc8a83 -->
