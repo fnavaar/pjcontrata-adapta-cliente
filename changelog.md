@@ -75,3 +75,18 @@
 - Pendência transferida para F2-T07: conta de teste Google Ads — a UI do Google prende o fluxo de criação num assistente de campanha que exige forma de pagamento (mesmo com ?test=1, outra conta Google e URL sf=mt/404); 3 rascunhos de conta inertes sem cobrança (852-277-7243, 785-059-****, 549-***-****); não confirmar cartão. Caminhos a tentar: suporte Google Ads, app mobile, MCC real.
 - Recibo 05_entregas/fase-2/recibo-F2-T06.md.
 - Fase 2: 6/9 (67%).
+
+## 2026-09-21/22 — F2-T07 concluída
+
+- F2-T07: publicação Google pausada, confirmada e idempotente (build v0.0.119).
+- Hook publicacao_google.js (adaptador isolado por plataforma, reusa coleções F2-T01): POST /backend/v1/publicacoes-google + reconciliar — adaptador Google REAL (v25 REST): renova access token → campaignBudget (NORMAL) → campaign SEARCH sempre PAUSED (RN-213) → confirmação por consulta.
+- Gates server-side (CA-2-007/RN-211/212): papel, aprovação, APPROVED, checklist READY, snapshot, plataforma google, allowlist, environment teste — todos ANTES da API.
+- Credencial expirada (401/403) → BLOCKED (RN-222); timeout → UNCERTAIN (RN-223); budget criado + campaign falha → PARTIAL_FAILURE com budget preservado.
+- Idempotência `pubg:` prefix; reconciliação completa campaign faltante → RECOVERED.
+- Verificação: 8/9 (falha externa: Meta 500 transitório is_transient na sandbox — token válido, núcleo Meta intocado, marcadores v0.0.117 verificados no deploy).
+- Modelo Google da F1 ativado (estava inativo; aplicar-modelo valida plataforma E objetivo — campanha google precisa objective 'leads').
+- Teste humano aprovado pelo owner (22/09/2026, 08:19): campanha Google válida → BLOCKED limpo antes da API, zero tentativa fantasma, repetição consistente.
+- Pendência mantida: conta de teste Google Ads na allowlist (F2-T06) — publicação real (CA-2-008/009) exercita sem novo deploy quando a conta chegar.
+- Recibo 05_entregas/fase-2/recibo-F2-T07.md.
+- Aprendizado AP-2026-09-22-0822: adaptador por plataforma em hook próprio reusando o núcleo; ausência de conta de teste não bloqueia implementação (gates bloqueiam antes da API; caminho real pronto sem novo deploy); Google Ads v25: budget e campaign são mutates separados (falha entre eles = PARTIAL_FAILURE com budget preservado).
+- Fase 2: 7/9 (78%). Próxima elegível: F2-T08.
